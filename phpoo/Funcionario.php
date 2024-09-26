@@ -4,7 +4,7 @@ class Funcionario
 {
     var $nome, $salario;
 
-    function   __construct($n, $s)
+    function  __construct($n, $s)
     {
         $this->nome = $n;
         $this->salario = $s;

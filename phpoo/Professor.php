@@ -16,4 +16,8 @@ class Professor extends Funcionario
     {
         $this->disciplina = $disciplina;
     }
+
+    static function teste(){
+        echo "Metodo de classe";
+    }
 }
