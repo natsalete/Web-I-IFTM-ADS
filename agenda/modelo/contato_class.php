@@ -30,7 +30,7 @@
         }
        
         public function getEmail(){
-            return $this->$email;
+            return $this->email;
         }
 
         public function setTelefone($telefone){
@@ -38,14 +38,14 @@
         }
        
         public function getTelefone(){
-            return $this->$telefone;
+            return $this->telefone;
         }
         public function setFoto($foto){
             $this->foto = $foto;
         }
        
         public function getFoto(){
-            return $this->$foto;
+            return $this->foto;
         }
         
     }

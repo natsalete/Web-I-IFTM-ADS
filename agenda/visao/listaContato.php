@@ -25,7 +25,7 @@
 
         <?php  foreach($lista as $c){
             echo "<tr>";
-            echo "<td>" . $c->getId() . "<td>";
+            echo "<td>" . $c->getId() . "</td>";
             echo "<td><a href=contato.php?fun=exibir&id=" . $c->getId() . ">" . $c->getNome() . "</a></td>";
             echo "<td>" . $c->getEmail() . "</td>";
             echo "<td>" . $c->getTelefone() . "</td>";

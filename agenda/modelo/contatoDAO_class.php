@@ -41,7 +41,7 @@
             // $query recebe null
             try{
                 if($query == null){
-                    $dados = $this->con->query("SELECT * FROM contato");
+                    $dados = $this->con->query('SELECT * FROM contato');
                     //dataset (conjunto de dados) com todos os dados
                     //query() é função PDO, executa SQL
                 }else {
@@ -57,8 +57,8 @@
                     $c = new Contato();
                     $c->setId($linha["id"]);
                     $c->setNome($linha["nome"]);
-                    $c->setTelefone($linha["telefone"]);
                     $c->setEmail($linha["email"]);
+                    $c->setTelefone($linha["telefone"]);
                     $lista[] = $c;
                 }
 
