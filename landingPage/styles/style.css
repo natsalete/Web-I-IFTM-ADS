@@ -89,3 +89,19 @@ input {
   border-radius: 10px;
   font-size: 15px;
 }
+
+form [type="submit"] {
+  height: 50px;
+  width: 50%;
+  background-color: aqua;
+  color: black;
+  font-weight: bold;
+  font-family: "Sour Gummy", sans-serif;
+}
+
+form [type="submit"]:hover {
+  cursor: pointer;
+  background-color:  #cce4dc85;
+  color: #fff;
+  border: 2px solid aqua;
+}
