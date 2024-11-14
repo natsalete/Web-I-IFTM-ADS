@@ -1,6 +1,6 @@
 <?php
 session_start();
-    if(isset($GET["fun"])){
+    if(isset($_GET["fun"])){
         $fun = $_GET["fun"];
 
         if($fun == "cadastrar"){

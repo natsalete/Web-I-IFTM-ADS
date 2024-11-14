@@ -16,11 +16,11 @@
                 $dao = new ContatoDAO();
                 $dao->cadastrar($c);
 
-                $status = "Cadastro do Contato " . $c->getNome() . " efetuarcom sucesso";
+                $status = "Cadastro do Contato " . $c->getNome() . " efetuado com sucesso";
 
                 $lista = $dao->listar();
 
-                include_once("visao/listaContato.php");
+                include_once("visao/ListarContato.php");
             } else {
                 include_once("visao/formCadastroContato.php");
             }

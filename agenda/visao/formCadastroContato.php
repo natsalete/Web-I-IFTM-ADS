@@ -1,6 +1,6 @@
 <H1>cadastrar Contato</H1>
 
-<form action="contato.php?fun=cadastra" method="POST" enctype="multipart/form-data">
+<form action="contato.php?fun=cadastrar" method="POST" enctype="multipart/form-data">
 
     <label for="nome"> Nome: </label>
     <input type="text" id="nome" name="nome" /> <br />
