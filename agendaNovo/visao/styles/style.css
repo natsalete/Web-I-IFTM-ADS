@@ -1,0 +1,111 @@
+/* * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+} */
+
+body {
+  background-color: rgb(35, 35, 35);
+  color: #fff;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 15px;
+  /* font-family: "Roboto Mono", monospace;
+   */
+  /* font-family: "DynaPuff", system-ui; */
+  font-family: "Sour Gummy", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#titulo {
+  flex-direction: column;
+  line-height: 10px;
+}
+
+li {
+  display: inline-block;
+  margin: 20px;
+}
+
+a {
+  color: #fff;
+}
+
+a:hover {
+  color: aqua;
+  transition: 0.3s all;
+}
+
+#adminBotao {
+  border: 2px solid aqua;
+  border-radius: 15px;
+  padding: 10px;
+}
+
+#adminBotao:hover {
+  background-color: #cce4dc85;
+  color: aqua;
+}
+
+h1 {
+  font-weight: 700;
+}
+
+main {
+  display: flex;
+  flex-direction: row;
+  margin-top: 50px;
+}
+
+aside {
+  width: 50%;
+}
+
+h2 {
+  font-size: 25px;
+  /* line-height: 10px; */
+  color: aqua;
+}
+
+#imgPrincipal {
+  width: 500px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+}
+
+input {
+  margin-top: 20px;
+  height: 20px;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  font-size: 15px;
+}
+
+form [type="submit"] {
+  height: 50px;
+  width: 50%;
+  background-color: aqua;
+  color: black;
+  font-weight: bold;
+  font-family: "Sour Gummy", sans-serif;
+}
+
+form [type="submit"]:hover {
+  cursor: pointer;
+  background-color: #cce4dc85;
+  color: #fff;
+  border: 2px solid aqua;
+}

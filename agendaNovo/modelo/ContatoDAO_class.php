@@ -18,15 +18,14 @@
 		public function cadastrar($cont){
 			try{
 				$stmt = $this->con->prepare(
-				"INSERT INTO contato(nome, email, telefone, foto)
-				VALUES (:nome, :email, :telefone, :foto)");
+				"INSERT INTO contato(nome, email, telefone)
+				VALUES (:nome, :email, :telefone)");
 				//:nome - é uma âncora e será ligado pelo bindValue
 				//SQL injection
 				//ligamos as âncoras aos valores de Contato
 				$stmt->bindValue(":nome", $cont->getNome());
 				$stmt->bindValue(":email", $cont->getEmail());
 				$stmt->bindValue(":telefone", $cont->getTelefone());
-				$stmt->bindValue(":foto", "teste");
 				
 				$stmt->execute(); //execução do SQL	
 				/*$this->con->close();
@@ -42,14 +41,13 @@
 			try{
 				$stmt = $this->con->prepare(
 				"UPDATE contato SET nome=:nome, 
-				email = :email, telefone=:telefone, foto=:foto WHERE
+				email = :email, telefone=:telefone WHERE
 				id=:id");
 				
 				//ligamos as âncoras aos valores de Contato
 				$stmt->bindValue(":nome", $cont->getNome());
 				$stmt->bindValue(":email", $cont->getEmail());
 				$stmt->bindValue(":telefone", $cont->getTelefone());
-				$stmt->bindValue(":foto", $cont->getFoto());
 				$stmt->bindValue(":id", $cont->getId());
 				
 				$this->con->beginTransaction();
@@ -131,7 +129,6 @@
 				$c->setNome($dado[0]["nome"]);
 				$c->setTelefone($dado[0]["telefone"]);
 				$c->setEmail($dado[0]["email"]);
-				$c->setFoto($dado[0]["foto"]);
 				
 				return $c;	
 			}

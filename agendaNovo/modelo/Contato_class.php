@@ -38,12 +38,6 @@
 			$this->telefone = $t;
 		}
 		
-		public function getFoto(){
-			return $this->foto;
-		}
-		public function setFoto($foto){
-			$this->foto = $foto;
-		}
 	}
 
 ?>

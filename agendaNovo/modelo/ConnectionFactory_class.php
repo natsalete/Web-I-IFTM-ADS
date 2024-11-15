@@ -1,12 +1,12 @@
 <?php
 	class ConnectionFactory{
 		public $con = null;
-		public $dbType = "mysql";
-		public $host = "localhost";
-		public $user = "1234";
-		public $senha = "vertrigo";
-		public $db = "agenda";
-		public $persistente = false;
+        public $dbType = "mysql:";
+        public $host = "localhost";
+        public $user = "root";
+        public $senha = "1234";
+        public $db = "agenda";
+        public $persistente = false;
 		//Se for persistente a conexão se mantém até que o usuário
 		//pare de se comunicar com o sistema
 		

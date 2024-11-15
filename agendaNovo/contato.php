@@ -1,6 +1,6 @@
 <?php
 session_start();
-//include_once("visao/topo.php");
+include_once("visao/cabecalho.php");
 	if(isset($_GET["fun"])){
 		$fun = $_GET["fun"];
 		
@@ -9,7 +9,7 @@ session_start();
 			include_once("controle/CadastrarContato_class.php");
 			$pag = new CadastrarContato();
 			
-		/*} elseif($fun == "alterar"){
+		} elseif($fun == "alterar"){
 			include_once("controle/AlterarContato_class.php");
 			$pag = new AlterarContato();
 			
@@ -26,7 +26,7 @@ session_start();
 			include_once("controle/ExibirContato_class.php");
 			$pag = new ExibirContato();
 			
-		*/} else {
+		} else {
 			include_once("controle/ListarContato_class.php");
 			$pag = new ListarContato();			
 		}
@@ -36,6 +36,6 @@ session_start();
 		$pag = new ListarContato();
 	}
 	
-//include_once("visao/base.php");
+include_once("visao/rodape.php");
 
 ?>

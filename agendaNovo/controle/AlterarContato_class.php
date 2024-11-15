@@ -11,7 +11,6 @@
 				$c->setNome($_POST["nome"]);
 				$c->setEmail($_POST["email"]);
 				$c->setTelefone($_POST["telefone"]);
-				$c->setFoto("123");
 				
 				$dao = new ContatoDAO();
 				$dao->alterar($c);
