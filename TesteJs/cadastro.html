@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cadastro com Validaçao</title>
+    <script>
+        function valida(form) {
+        };
+    </script>
+  </head>
+  <body>
+    <form action="cadastro.php" method="POST" onsubmit="return valida(this);">
+      Nome: <input type="text" name="nome" /><br /><br />
+      E-mail: <input type="text" name="email" /><br /><br />
+      Idade:
+      <input type="text" name="idade" maxlength="2" size="2" /><br /><br />
+      Endereço: <input type="text" name="endereco" /><br /><br />
+      Telefone: <input type="text" name="tel" maxlength="10" /> (Formato:
+      DDD+TELEFONE: 1122223333)<br /><br />
+      Data de Nascimento:
+      <input type="text" name="data_nascimento" /><br /><br />
+      Senha: <input type="password" name="senha" />(Minimo: 6 caracteres)<br /><br />
+      Confirmação de Senha:
+      <input type="password" name="conf_senha" /><br /><br />
+      Sexo: <input type="radio" name="sexo" value="masc" />Masculino
+      <input type="radio" name="sexo" value="fem" />Feminino<br /><br />
+      <input type="submit" value="enviar" />
+    </form>
+  </body>
+</html>
