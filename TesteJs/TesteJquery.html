@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Teste JQuery</title>
+    <script type="text/javascript" src="jquery-3.7.1.min.js"></script>
+    <style>
+        #cor{
+            color: green;
+        }
+
+        #msg{
+            background-color: bisque;
+            border: 2px solid #000;
+        }
+    </style>
+    <script>
+      $(document).ready(function () {
+        $("btnFirst").click(function () {
+            $("li:firts").css("background-color", "blue");
+        });
+
+        $("#btn").click(function () {
+          $("#cor").css("color", "red");
+          $("#msg").css("height", "200px");
+          let cor = $("$msg").css("background-color");
+          if (cor == "rgb(255, 228, 196)") {
+            $("#msg").css("background-color", "pink");
+          } else {
+            $("#msg").css("background-color", "bisque");
+          }
+        });
+
+        $("#pegaFoto").click(function () {
+          let nomeArq = $("#foto").attr("src");
+          //busca o atributo src e guarda o valor
+          //alert(nomeArq);
+          $("#paragrafo").toggle(3000)
+        });
+
+        $("#pegaHTML").click(function () {
+          let texto = $("#paragrafo").html("src");
+          //busca o atributo src e guarda o valor
+          alert(texto);
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <div id="msg">
+      <h1 id="cor">Cabeçalho Vermelho</h1>
+    </div>
+
+    <button id="btn">Vermelho</button>
+
+    <ul>
+      <li>Primeiro Item</li>
+      <li>Segundo Item</li>
+      <li>Terceiro Item</li>
+      <li>Quarto Item</li>
+      <li>Quinto Item</li>
+    </ul>
+
+    <button id="btnFirst">First</button>
+
+    <img src="foto.webp"  width="300px" id="foto" alt="">
+    <button id="pegaFoto"> Pega nome foto</button>
+
+    <p id="paragrafo"> Parágrafo teste</p>
+    <button id="pegaHTML"> HTML </button>
+  </body>
+</html>

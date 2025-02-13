@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>javascript inline</title>
+    <script type="text/javascript" src="jquery-3.6.0.min.js"></script>
+    <script>
+      window.onload = function () {
+        document.getElementById("btn").onclik = mudaCor;
+      };
+
+      function mudaCor() {
+        document.getElementById("cor").style.color = "red";
+      }
+    </script>
+  </head>
+  <body>
+    <h1 id="cor">Cabeçalho Vermelho</h1>
+    <button
+      type="button"
+      onclick="document.getElementById('cor').style.color='red'"
+    >
+      Vermelho
+    </button>
+  </body>
+</html>

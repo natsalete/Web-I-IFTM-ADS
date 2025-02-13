@@ -6,12 +6,37 @@
     <title>Cadastro com Validaçao</title>
     <script>
         function valida(form) {
+          if(form.nome.value == ""){
+            alert("Preencher o nome corretamente");
+            form.nome.focus();
+            return false;
+          }
+          if(form.data_nascimento.value == '' || form.data_nascimento.value.length != 10){
+            alert("Preencher a data de nascimento corretamente");
+            form.data_nascimento.focus();
+            return false;
+          }
+          if(form.senha.value || form.senha.value.length < 6){
+            alert("Preencher a senha corretamente");
+            form.data_nascimento.focus();
+            return false;
+          }
+          if(form.sexo[0].checked == false && form.sexo[0].checked == false){
+            alert("Selecione o sexo");
+            return false;
+          }
+  
         };
     </script>
   </head>
   <body>
     <form action="cadastro.php" method="POST" onsubmit="return valida(this);">
       Nome: <input type="text" name="nome" /><br /><br />
+      CPF: <input type="text" name="cpf" maxlength="14" onkeypress="
+      if (this.value.length == 3) this.value += '.';
+      if (this.value.length == 7) this.value += '.';
+      if (this.value.length == 11) this.value += '-';
+    "/><br /><br />
       E-mail: <input type="text" name="email" /><br /><br />
       Idade:
       <input type="text" name="idade" maxlength="2" size="2" /><br /><br />
@@ -19,7 +44,7 @@
       Telefone: <input type="text" name="tel" maxlength="10" /> (Formato:
       DDD+TELEFONE: 1122223333)<br /><br />
       Data de Nascimento:
-      <input type="text" name="data_nascimento" /><br /><br />
+      <input type="text" name="data_nascimento" value="dd/mm/aaaa" maxlength="10" onfocus="if(this.value=='dd/mm/aaaa') {this.value=''}" onblur="if(this.value==''){this.value='dd/mm/aaaa'}"/><br /><br />
       Senha: <input type="password" name="senha" />(Minimo: 6 caracteres)<br /><br />
       Confirmação de Senha:
       <input type="password" name="conf_senha" /><br /><br />
@@ -27,5 +52,6 @@
       <input type="radio" name="sexo" value="fem" />Feminino<br /><br />
       <input type="submit" value="enviar" />
     </form>
+
   </body>
 </html>
